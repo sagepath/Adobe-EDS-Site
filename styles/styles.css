@@ -11,17 +11,52 @@
  */
 
  :root {
+  /* Sagepath colors*/
+  --dark-purple: #2C1C53;
+  --purple: #6C39D9;
+  --light-purple: #CAB0FF;
+  --white: #FFFFFF;
+  --ivory: #F3F0E8;
+  --dark-ivory: #D9D6CC;
+  --slate: #4F4A5C;
+  --midnight: #120E1D;
+
+  /* Sagepath Fonts */
+  --poppins-font-family: 'Poppins', sans-serif;
+
+  /* Font Sizes */
+  --size-14: 14px;
+
+  /* Line Height */
+  --x2: 2;
+
+  /* Sagepath Theme */
+  --primary-background-color: var(--dark-purple);
+  --secondary-background-color: var(--ivory);
+
   /* colors */
-  --link-color: #035fe6;
   --link-hover-color: #136ff6;
-  --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
 
-  /* fonts */
+  /* Header */
+  --header-font-family: var(--poppins-font-family);
+  --header-font-color: var(--white);
+  --header-hover-color: var(--light-purple);
+  --header-font-size: var(--size-14);
+  --header-line-height: var(--x2);
+  --header-dropdown-background: var(--midnight);
+  --header-dropdown-font-color: var(--ivory);
+  --header-dropdown-hover-color: var(--dark-purple);
+
+  /* nav height */
+  --nav-height: 80px;
+
+  
+
   --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --heading-font-family: var(--poppins-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -37,8 +72,7 @@
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
 
-  /* nav height */
-  --nav-height: 64px;
+
 
 }
 
@@ -67,7 +101,7 @@ body {
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--primary-background-color);
   display: none;
 }
 
@@ -151,7 +185,7 @@ a.button:any-link, button {
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
-  color: var(--background-color);
+  color: var(--primary-background-color);
   background-color: var(--link-color);
   margin: 16px 0;
   white-space: nowrap;
@@ -187,7 +221,7 @@ main input {
   box-sizing: border-box;
   border: 1px solid var(--text-color);
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--primary-background-color);
 }
 
 main input:hover {
