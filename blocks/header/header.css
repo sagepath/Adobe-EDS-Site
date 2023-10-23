@@ -214,13 +214,15 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
+    min-height: 45px;
+    padding-top: 5px;
   }
 
   header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: .5em;
+    top: .9em;
     right: 2px;
     transform: rotate(135deg);
     width: 6px;
@@ -231,9 +233,8 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
-    top: unset;
-    bottom: .5em;
     transform: rotate(315deg);
+    top: 1.1em;
   }
 
   header nav .nav-sections ul {
