@@ -11,6 +11,9 @@
  */
 
  :root {
+  /* Breakpoints */
+  --mobile-breakpoint-min: 900px;
+  --mobile-breakpoint-max: calc(var(--mobile-breakpoint-min) - 1px);
   /* Sagepath colors*/
   --dark-purple: #2C1C53;
   --purple: #6C39D9;
@@ -46,16 +49,18 @@
   --header-hover-color: var(--light-purple);
   --header-font-size: var(--size-14);
   --header-line-height: var(--x2);
+
+  /* nav height */
+  --nav-height: 100px;
+
+  /* Header Mobile */
   --header-dropdown-background: var(--midnight);
   --header-dropdown-font-color: var(--ivory);
   --header-dropdown-hover-color: var(--dark-purple);
   --header-hamburger-icon-color: var(--white);
   --header-hamburger-icon-background: var(--purple);
+  --border-color: var(--purple);
 
-  /* nav height */
-  --nav-height: 100px;
-
-  
 
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--poppins-font-family);
