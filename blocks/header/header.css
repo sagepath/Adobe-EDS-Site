@@ -10,7 +10,7 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height)
+    'brand tools hamburger'  var(--nav-height)
     'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0 2em;
@@ -23,7 +23,7 @@ header nav {
 
 header nav[aria-expanded="true"] {
   grid-template:
-    'hamburger brand' var(--nav-height)
+    'brand hamburger' var(--nav-height)
     'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
@@ -56,22 +56,26 @@ header nav p {
 /* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
-  height: 22px;
+  height: 50px;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
 header nav .nav-hamburger button {
-  height: 22px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  border: 0;
-  border-radius: 0;
   padding: 0;
-  background-color: var(--primary-background-color);
+  background-color: var(--header-hamburger-icon-background);
   color: inherit;
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  border-radius: 0px 25px 25px 25px;
 }
 
 header nav .nav-hamburger-icon,
@@ -87,7 +91,7 @@ header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
   content: '';
   position: absolute;
-  background: currentcolor;
+  background: var(--header-hamburger-icon-color);
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon,
@@ -95,7 +99,7 @@ header nav[aria-expanded="false"] .nav-hamburger-icon::before,
 header nav[aria-expanded="false"] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
-  background: currentcolor;
+  background: var(--header-hamburger-icon-color);
 }
 
 header nav[aria-expanded="false"] .nav-hamburger-icon::before {
@@ -176,8 +180,11 @@ header nav .nav-sections ul > li {
   font-size: var(--size-14);
   line-height: var(--x2);
 }
+header nav .nav-sections ul > li:hover a {
+  li a {
+    color: var(--header-dropdown-font-color);
+  }
 
-header nav .nav-sections ul > li:hover {
   color: var(--header-hover-color);
 }
 
@@ -185,6 +192,11 @@ header nav .nav-sections ul > li > ul {
   margin-top: 0;
   color: var(--header-dropdown-font-color);
   
+}
+
+header nav .nav-sections ul > li > ul > li:hover a {
+  color: var(--header-hover-color);
+  text-decoration: none;
 }
 
 header nav .nav-sections ul > li > ul > li {
