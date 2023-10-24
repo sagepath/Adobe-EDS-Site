@@ -30,6 +30,9 @@
   /* Font Sizes */
   --size-14: 14px;
 
+  /* Font Weights */
+  --bold-700: 700;
+
   /* Line Height */
   --x2: 2;
 
@@ -39,13 +42,14 @@
 
   /* colors */
   --link-hover-color: #136ff6;
-  --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
 
   /* Header */
+  --header-background-color: var(--dark-purple);
   --header-font-family: var(--poppins-font-family);
   --header-font-color: var(--white);
+  --header-font-weight: var(--bold-700);
   --header-hover-color: var(--light-purple);
   --header-font-size: var(--size-14);
   --header-line-height: var(--x2);
@@ -57,10 +61,23 @@
   --nav-height: 100px;
 
   /* Header Mobile */
-
   --header-hamburger-icon-color: var(--white);
   --header-hamburger-icon-background: var(--purple);
   --header-hamburger-border-color: var(--purple);
+
+
+
+  /* Footer */
+  --footer-background-color: var(--dark-purple);
+  --footer-font-family: var(--poppins-font-family);
+  --footer-listed-links-color: var(--ivory);
+  --footer-links-font-size: var(--size-14);
+  --footer-links-line-height: var(--x2);
+  --footer-links-weight: var(--bold-700);
+  --footer-border-color: var(--purple);
+  --footer-icon-border-color: var(--purple);
+
+
 
 
   --body-font-family: roboto, roboto-fallback;
@@ -147,7 +164,6 @@ hr {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   border: 0;
-  border-bottom: 1px solid var(--overlay-background-color);
 }
 
 code, pre, samp {
@@ -164,7 +180,6 @@ pre {
 }
 
 main pre {
-  background-color: var(--overlay-background-color);
   padding: 1em;
   border-radius: .25em;
   overflow-x: auto;
@@ -208,7 +223,6 @@ a.button:hover, a.button:focus, button:hover, button:focus  {
 }
 
 button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
   cursor: unset;
 }
 
@@ -261,8 +275,8 @@ main img {
 
 .icon {
   display: inline-block;
-  height: 24px;
-  width: 24px;
+  height: fit-content;
+  width: fit-content;
 }
 
 .icon img {

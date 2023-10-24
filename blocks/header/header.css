@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--primary-background-color);
+  background-color: var(--header-background-color);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -50,7 +50,7 @@ header nav[aria-expanded="true"] {
 
 header nav p {
   margin: 0;
-  line-height: 1;
+  line-height: var(--header-line-height);
 }
 
 /* hamburger */
@@ -112,15 +112,16 @@ header nav[aria-expanded="false"] .nav-hamburger-icon::after {
 
 header nav[aria-expanded="true"] .nav-hamburger-icon {
   height: 22px;
+  width: 22px;
 }
 
 header nav[aria-expanded="true"] .nav-hamburger-icon::before,
 header nav[aria-expanded="true"] .nav-hamburger-icon::after {
   top: 3px;
-  left: 1px;
+  left: 4px;
   transform: rotate(45deg);
-  transform-origin: 2px 1px;
-  width: 24px;
+  transform-origin: 0px 1px;
+  width: 90%;
   height: 2px;
   border-radius: 2px;
 }
@@ -143,8 +144,8 @@ header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
   font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
+  font-weight: var(--header-font-weight);
+  line-height: var(--header-line-height);
 }
 
 header nav .nav-brand img {
@@ -158,7 +159,6 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
-  background-color: var(--overlay-color);
 }
 
 header nav[aria-expanded="true"] .nav-sections {
@@ -171,14 +171,14 @@ header nav .nav-sections ul  {
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
-  font-weight: 500;
+  font-weight: var(--header-font-weight);
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 700;
+  font-weight: var(--header-font-weight);
   color: var(--header-font-color);
   font-size: var(--size-14);
-  line-height: var(--x2);
+  line-height: var(--header-line-height);
 }
 header nav .nav-sections ul > li a:hover {
   color: var(--header-hover-color);
@@ -196,7 +196,7 @@ header nav .nav-sections ul > li > ul > li:hover a {
 }
 
 header nav .nav-sections ul > li > ul > li {
-  font-weight: 500;
+  font-weight: var(--header-font-weight);
 }
 
 @media (min-width: 900px) {
@@ -248,7 +248,7 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections > ul > li {
     flex: 0 1 auto;
     position: relative;
-    font-weight: 500;
+    font-weight: var(--header-font-weight);
   }
 
   header nav .nav-sections > ul > li > ul {
