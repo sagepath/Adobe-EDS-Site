@@ -303,10 +303,10 @@ header nav .nav-tools {
     > ul {
       margin: 0;
       margin: 15px 0;
-      border-bottom: solid 1px white;
+      border-bottom: solid 1px var(--header-hamburger-border-color);
       > li {
         padding: 15px 0;
-        border-top: solid 1px white;
+        border-top: solid 1px var(--header-hamburger-border-color);
        }
     }
   } 

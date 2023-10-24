@@ -6,8 +6,20 @@ footer {
 
 footer .footer {
   max-width: 1200px;
-  margin: auto;
+  > div {
+    display: flex;
+  }
 }
+
+footer .footer .icon.icon-logo {
+  width: fit-content;
+  
+  > img {
+    width: 128px;
+    height: auto;
+  }
+}
+
 
 footer .footer p {
   margin: 0;

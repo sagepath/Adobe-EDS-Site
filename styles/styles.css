@@ -49,17 +49,18 @@
   --header-hover-color: var(--light-purple);
   --header-font-size: var(--size-14);
   --header-line-height: var(--x2);
+  --header-dropdown-background: var(--midnight);
+  --header-dropdown-font-color: var(--ivory);
+  --header-dropdown-hover-color: var(--dark-purple);
 
   /* nav height */
   --nav-height: 100px;
 
   /* Header Mobile */
-  --header-dropdown-background: var(--midnight);
-  --header-dropdown-font-color: var(--ivory);
-  --header-dropdown-hover-color: var(--dark-purple);
+
   --header-hamburger-icon-color: var(--white);
   --header-hamburger-icon-background: var(--purple);
-  --border-color: var(--purple);
+  --header-hamburger-border-color: var(--purple);
 
 
   --body-font-family: roboto, roboto-fallback;
