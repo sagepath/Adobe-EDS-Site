@@ -9,7 +9,7 @@ a:any-link {
     color: var(--link-hover-color);
   }
   
-  /* buttons */
+  /* Common Styling */
   a.button:any-link, button {
     font-family: var(--button-font);
     font-size: var(--button-text-size);
@@ -23,28 +23,69 @@ a:any-link {
     font-style: normal;
     font-weight: var(--button-font-weight);
     cursor: pointer;
-    color: var(--button-font-color);
-    background-color: var(--button-background-color);
     margin: 16px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     border-radius: 0 25px 25px 25px;
   }
-  
   a.button:hover, a.button:focus, button:hover, button:focus  {
-    background-color: var(--button-hover-background-color);
-    color: var(--button-hover-font-color);
     cursor: pointer;
   }
-  
-  button:disabled, button:disabled:hover {
-    cursor: unset;
+/* Primary Button */
+  p > a.button {
+    background-color: var(--button-background-color);
+    color: var(--button-font-color);
   }
-  
+
+  p > a.button:hover {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-font-color);
+  }
+
+  /* Primary Button v2 */
+  p.button-container > strong > a.button {
+    background-color: var(--button2-background-color);
+    color: var(--button2-font-color);
+    border: solid 2px var(--button2-border-color);
+  }
+
+  p.button-container > strong > a.button:hover {
+    background-color: var(--button2-background-hover-color);
+    color: var(--button2-font-hover-color);
+    border-color: var(--button2-border-hover-color);
+  }
+  /* Secondary Button */
   a.button.secondary, button.secondary {
-    background-color: unset;
-    border: 2px solid currentcolor;
-    color: var(--text-color)
+    background-color: var(--button-secondary-background-color);
+    color: var(--button-secondary-font-color)
   }
+
+  a.button.secondary:hover, button.secondary:hover {
+    background-color: var(--button-secondary-hover-background-color);
+    color: var(--button-secondary-font-hover-color)
+  }
+  /* Secondary Button v2 */
+  p > strong > em > a.button.secondary {
+    background-color: var(--button2-secondary-background-color);
+    color: var(--button2-secondary-font-color);
+    border: solid 2px var(--button2-secondary-border-color);
+  }
+
+  p > strong > em > a.button.secondary:hover {
+    background-color: var(--button2-secondary-background-hover-color);
+    color: var(--button2-secondary-font-hover-color);
+    border-color: var(--button2-secondary-hover-border-color);
+  }
+
+
+  /* Disabled Button */
+  button:disabled, button:disabled:hover {
+    cursor: not-allowed;
+    background-color: var(--button-disabled-background-color);
+    color: var(--button-disabled-text);
+  }
+  
+
+  
   

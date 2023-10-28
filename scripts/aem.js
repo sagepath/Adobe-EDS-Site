@@ -359,6 +359,7 @@ function decorateTemplateAndTheme() {
  * Decorates paragraphs containing a single link as buttons.
  * @param {Element} element container element
  */
+
 function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
     a.title = a.title || a.textContent;
@@ -379,11 +380,11 @@ function decorateButtons(element) {
           a.className = 'button primary';
           twoup.classList.add('button-container');
         }
-        if (
+        if (   
           up.childNodes.length === 1
           && up.tagName === 'EM'
           && twoup.childNodes.length === 1
-          && twoup.tagName === 'P'
+          && (twoup.tagName === 'P' || twoup.tagName === "STRONG")
         ) {
           a.className = 'button secondary';
           twoup.classList.add('button-container');

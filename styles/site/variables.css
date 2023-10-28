@@ -31,20 +31,43 @@
      --primary-background-color: var(--ivory);
      --secondary-background-color: var(--dark-purple);
 
-     /* Button Styling */
+     /* Common Button Styling */
      --button-font: var(--poppins-font-family);
-     --button-font-color: var(--white);
      --button-text-size: var(--size-16);
      --button-line-height: 26px;
-     --button-background-color: var(--purple);
      --button-font-weight: var(--bold-600);
 
-     --button-hover-font-color: var(--white);
-     --button-hover-background-color: var(--dark-purple);
+    /* Primary Button Colors*/
+    --button-background-color: var(--purple);
+    --button-font-color: var(--white);
+    --button-hover-font-color: var(--white);
+    --button-hover-background-color: var(--dark-purple);
 
+    /* Primary Button Colors v2 */
+    --button2-background-color: transparent;
+    --button2-font-color: var(--purple);
+    --button2-border-color: var(--purple);
+    --button2-background-hover-color: transparent;
+    --button2-font-hover-color: var(--dark-purple);
+    --button2-border-hover-color: var(--dark-purple);
+
+    /* Secondary Button Colors */
+    --button-secondary-background-color: var(--light-purple);
+    --button-secondary-font-color: var(--dark-purple);
+    --button-secondary-hover-background-color: var(--white);
+    --button-secondary-font-hover-color: var(--dark-purple);
+
+     /* Secondary Button Colors v2 */
+    --button2-secondary-background-color: transparent;
+    --button2-secondary-font-color: var(--dark-purple);
+    --button2-secondary-border-color: var(--dark-purple);
+    --button2-secondary-hover-background-color: transparent;
+    --button2-secondary-font-hover-color: var(--white);
+    --button2-secondary-border-hover-color: var(--white);
+
+     /* Disabled Button */
      --button-disabled-background-color: var(--white);
      --button-disabled-text: var(--light-slate);
-
 
      /* Colors */
      --link-hover-color: #136ff6;
