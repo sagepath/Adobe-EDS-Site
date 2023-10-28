@@ -132,6 +132,7 @@ function sampleRUM(checkpoint, data = {}) {
  * Setup block utils.
  */
 function setup() {
+  console.log("test");
   window.hlx = window.hlx || {};
   window.hlx.RUM_MASK_URL = 'full';
   window.hlx.codeBasePath = '';
