@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+ /*TODO break up this file into sub files*/
+
  :root {
   /* Breakpoints */
   --mobile-breakpoint-min: 900px;
@@ -22,6 +24,7 @@
   --ivory: #F3F0E8;
   --dark-ivory: #D9D6CC;
   --slate: #4F4A5C;
+  --light-slate: #D5D5D5;
   --midnight: #120E1D;
 
   /* Sagepath Fonts */
@@ -29,21 +32,38 @@
 
   /* Font Sizes */
   --size-14: 14px;
+  --size-16: 16px;
 
   /* Font Weights */
   --bold-700: 700;
+  --bold-600: 600;
 
-  /* Line Height */
+  /* Line Heights */
   --x2: 2;
 
   /* Sagepath Theme */
-  --primary-background-color: var(--dark-purple);
-  --secondary-background-color: var(--ivory);
+  --primary-background-color: var(--ivory);
+  --secondary-background-color: var(--dark-purple);
 
-  /* colors */
+  /* Button Styling */
+  --button-font: var(--poppins-font-family);
+  --button-font-color: var(--white);
+  --button-text-size: var(--size-16);
+  --button-line-height: 26px;
+  --button-background-color: var(--purple);
+  --button-font-weight: var(--bold-600);
+
+  --button-hover-font-color: var(--white);
+  --button-hover-background-color: var(--dark-purple);
+
+ --button-disabled-background-color: var(--white);
+ --button-disabled-text: var(--light-slate);
+
+
+  /* Colors */
   --link-hover-color: #136ff6;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color: var(--slate);
 
   /* Header */
   --header-background-color: var(--dark-purple);
@@ -57,15 +77,13 @@
   --header-dropdown-font-color: var(--ivory);
   --header-dropdown-hover-color: var(--dark-purple);
 
-  /* nav height */
+  /* Header height */
   --nav-height: 100px;
 
   /* Header Mobile */
   --header-hamburger-icon-color: var(--white);
   --header-hamburger-icon-background: var(--purple);
   --header-hamburger-border-color: var(--purple);
-
-
 
   /* Footer */
   --footer-background-color: var(--dark-purple);
@@ -77,8 +95,6 @@
   --footer-border-color: var(--purple);
   --footer-icon-border-color: var(--purple);
   --footer-icon-border-hover-color: var(--light-purple);
-
-
 
 
   --body-font-family: roboto, roboto-fallback;
@@ -97,9 +113,6 @@
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
-
-
-
 }
 
 @font-face {
@@ -199,27 +212,30 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
+  font-family: var(--button-font);
+  font-size: var(--button-text-size);
+  line-height: var(--button-line-height);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
-  padding: 5px 30px;
+  padding: 12px 36px 12px 36px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--button-font-weight);
   cursor: pointer;
-  color: var(--primary-background-color);
-  background-color: var(--link-color);
+  color: var(--button-font-color);
+  background-color: var(--button-background-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 0 25px 25px 25px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-font-color);
   cursor: pointer;
 }
 

@@ -2,12 +2,12 @@
 .teaser.homepage {
 
     /*Primary Coloring*/
-    &.primary {
-        background-color: purple;
+    &.dark {
+        
     }
 
     /*Secondary Coloring*/
-    &.secondary {
+    &.light {
 
     }
 

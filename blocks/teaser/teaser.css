@@ -1,1 +1,2 @@
-@import './variations/homepage-teaser.css'
+@import 'base.css';
+@import './variations/homepage-teaser.css';

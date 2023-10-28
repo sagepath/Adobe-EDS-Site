@@ -38,15 +38,16 @@ export default function decorate(block) {
         
     })
     if (titles.length > 1) {
-        titles[0].className = 'teaser-pretitle';
-        titles[1].className = 'teaser-title'
+        titles[0].className = 'teaser-pre-title';
+        titles[1].className = 'teaser-main-title'
     }
     if (images.length > 1) {
-        images[0].className = 'first-image';
-        images[1].className = 'second-image';
+        images[0].className = 'teaser-first-image';
+        images[1].className = 'teaser-second-image';
     }
     block.textContent = '';
     titles.forEach((title) => {
+        title.firstElementChild.classList.add('title');
         block.append(title);
     })
     images.forEach((image) => {
