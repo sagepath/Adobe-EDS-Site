@@ -1,6 +1,5 @@
 footer {
-  padding: 2rem 0;
-  margin: 0 2rem;
+  padding: 2rem;
   border-top: solid 1px var(--footer-border-color);
   background-color: var(--footer-background-color);
   font-size: var(--footer-links-font-size);
