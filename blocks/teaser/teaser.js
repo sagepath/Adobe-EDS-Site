@@ -29,9 +29,10 @@ export default function decorate(block) {
             //check if there is any text being missed
             if (row.innerText.trim().length != 0) {
                 //wrap in a p tag
-                const p = document.createElement('p');
-                p.append(row.innerText.trim());
-                elements.push(p);
+                const div = document.createElement('div');
+                div.append(document.createElement('p'));
+                div.children[0].append(row.innerText.trim())
+                elements.push(div);
                 
             }
         }
@@ -51,6 +52,7 @@ export default function decorate(block) {
         block.append(title);
     })
     images.forEach((image) => {
+        image.classList.add('image')
         block.append(image);
     })
     elements.forEach((element) => {

@@ -15,10 +15,13 @@
 
      /* Sagepath Fonts */
      --poppins-font-family: 'Poppins', sans-serif;
+     --superior-font-family:  'superior-title', serif;
 
      /* Font Sizes */
      --size-14: 14px;
      --size-16: 16px;
+     --size-60: 60px;
+     --size-120: 120px;
 
      /* Font Weights */
      --bold-700: 700;
@@ -30,6 +33,12 @@
      /* Sagepath Theme */
      --primary-background-color: var(--ivory);
      --secondary-background-color: var(--dark-purple);
+     --text-color: var(--slate);
+     --link-hover-color: var(--purple);
+     --highlight-background-color: #ccc;
+     --body-font-family: var(--poppins-font-family);
+     --heading-font-family: var(--superior-font-family);
+     --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
      /* Common Button Styling */
      --button-font: var(--poppins-font-family);
@@ -68,11 +77,7 @@
      /* Disabled Button */
      --button-disabled-background-color: var(--white);
      --button-disabled-text: var(--light-slate);
-
-     /* Colors */
-     --link-hover-color: #136ff6;
-     --highlight-background-color: #ccc;
-     --text-color: var(--slate);
+    
 
      /* Header */
      --header-background-color: var(--dark-purple);
@@ -105,10 +110,22 @@
      --footer-icon-border-color: var(--purple);
      --footer-icon-border-hover-color: var(--light-purple);
 
+     /* Default Teaser */
+     --teaser-pretitle-color: var(--light-purple);
+     --teaser-title-color: var(--ivory);
+     --teaser-title-font-size: var(--size-120);
+     --teaser-title-font-weight: var(--bold-700);
+     --teaser-title-line-height: 1;
+     --teaser-text-color: var(--ivory);
 
-     --body-font-family: roboto, roboto-fallback;
-     --heading-font-family: var(--poppins-font-family);
-     --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+     /* Homepage Teaser Dark Theme */
+     --hpd-teaser-pretitle-color: var(--light-purple);
+     --hpd-teaser-title-color: var(--white);
+     --hpd-teaser-title-font-size: var(--size-60);
+     --hpd-teaser-title-line-height: 1;
+     --hpd-teaser-text-color: var(--white);
+     
+
 
      /* body sizes */
      --body-font-size-m: 22px;

@@ -3,7 +3,14 @@
 
     /*Primary Coloring*/
     &.dark {
-        
+        .title {
+            font-size: var(--hpd-teaser-title-font-size);
+            color: var(--hpd-teaser-title-color);
+            line-height: var(--hpd-teaser-line-height);
+        }
+        > div > p {
+            color: var(--hpd-teaser-text-color);
+        }
     }
 
     /*Secondary Coloring*/

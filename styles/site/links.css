@@ -33,12 +33,14 @@ a:any-link {
     cursor: pointer;
   }
 /* Primary Button */
-  p > a.button {
+  p > a.button,
+  div > a.button {
     background-color: var(--button-background-color);
     color: var(--button-font-color);
   }
 
-  p > a.button:hover {
+  p > a.button:hover,
+  div > a.button:hover {
     background-color: var(--button-hover-background-color);
     color: var(--button-hover-font-color);
   }
