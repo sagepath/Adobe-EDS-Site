@@ -1,0 +1,11 @@
+/* Styles that set up a base level teaser that all modifiers will share*/
+.teaser.hero {
+    .section.teaser-container {
+        .title { 
+            color: var(--teaser-title-color);
+            font-size: var(--teaser-title-font-size);
+            line-height: var(--teaser-title-line-height);
+            font-weight: var(--teaser-title-font-weight);
+        }
+    }
+}
