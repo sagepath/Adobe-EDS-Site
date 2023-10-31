@@ -48,9 +48,11 @@
 /* Style Modifiers to Move Content Horizontally*/
 .teaser.align-center {
     align-items: center !important;
+    text-align: center !important;
 }
 .teaser.align-right {
     align-items: end !important;
+    text-align: center !important;
 }
 /* Style Modifiers to Move Content Vertically*/
 .teaser.justify-center {
