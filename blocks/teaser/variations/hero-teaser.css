@@ -1,11 +1,59 @@
-/* Styles that set up a base level teaser that all modifiers will share*/
+
+    /*TODO secondary template styles */
+
+/*primary styles and fonts for the hero.teasesr */
 .teaser.hero {
-    .section.teaser-container {
-        .title { 
-            color: var(--teaser-title-color);
-            font-size: var(--teaser-title-font-size);
-            line-height: var(--teaser-title-line-height);
-            font-weight: var(--teaser-title-font-weight);
+    max-height: 600px;
+    height: 600px;
+
+    .teaser-pre-title {
+        .title {
+            font-family: var(--hero-p-teaser-text-font-family);
+            color: var(--hero-p-teaser-text-color);
+            font-size: var(--hero-p-teaser-pretitle-font-size);
+            line-height: var(--hero-p-teaser-pretitle-line-height);
+            font-weight: var(--hero-p-teaser-pretitle-font-weigh);
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
     }
-}
+    .title {
+        margin: 0;
+        color: var(--hero-p-teaser-title-color);
+        font-size: var(--hero-p-teaser-title-font-size);
+        line-height: var(--hero-p-teaser-title-line-height);
+        font-family: var(--hero-p-teaser-title-font-family);
+        font-weight: var(--hero-p-teaser-title-font-weight);
+    }
+    .image  > picture > img {
+        max-height: 600px;
+        width: 100%;
+        height: 600px;
+    }
+    }
+
+/*rounded modifier styles*/
+.section.teaser-container .teaser.hero.rounded {
+        max-width: 70%;
+        .teaser-first-image.image {
+            position: absolute;
+            max-width: 72%;
+            left: 0;    
+            >picture {
+                >img {
+                    border-radius: 0 0 200px 0;
+                }
+            }
+        }
+        .teaser-second-image.image {
+            position: absolute;
+            max-width: 73%;
+            left: 75%;
+            >picture {
+                >img {
+                    border-radius: 0 0 0 200px;
+                }
+            }
+        }
+    }
+

@@ -1,6 +1,15 @@
 /* Styles that set up a base level teaser that all modifiers will share*/
-.section.teaser-container .teaser div:not(.image) {
+.section.teaser-container .teaser div:not(.image),
+.section.teaser-container .teaser em {
     z-index: 5;
+}
+
+.section.teaser-container .teaser-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
 
 .section.teaser-container {
@@ -8,7 +17,6 @@
     padding: 0;
     max-height: 720px;
     height: 720px;
-
     .teaser-wrapper  {
         height: 100%;
         .teaser {
@@ -31,16 +39,28 @@
             display: flex;
             >img {
                 max-height: 720px;
-                min-height: 720px;
+                height: 720px;
                 width: 100%;
             }
         }
     }
 }
-/* Style Modifiers to Align Conteent*/
-.teaser.centered-content {
-    align-items: center;
+/* Style Modifiers to Move Content Horizontally*/
+.teaser.align-center {
+    align-items: center !important;
 }
-.teaser.right-aligned-content {
-    align-items: end;
+.teaser.align-right {
+    align-items: end !important;
+}
+/* Style Modifiers to Move Content Vertically*/
+.teaser.justify-center {
+    justify-content: center !important;
+}
+
+.teaser.justify-end {
+    justify-content: end !important;
+}
+
+.teaser.justify-baseline {
+    justify-content: baseline !important;
 }

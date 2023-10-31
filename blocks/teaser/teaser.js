@@ -10,7 +10,7 @@ export default function decorate(block) {
     //sort through the html of the teaser block by row
     [...block.children].forEach((row) => {
         //pull the following items out
-        let htmlItem = row.querySelector('h1, h2, h3, h4, h5, h6, a, p, button, picture');
+        let htmlItem = row.querySelector('h1, h2, h3, h4, h5, h6, em, a, p, button, picture');
         if (htmlItem != null) {
             let nodeName = htmlItem.nodeName;
             //if it is a title then push into titles array
@@ -20,10 +20,16 @@ export default function decorate(block) {
             //TODO add createOptimizedPicture;
             } else if (nodeName.includes('PICTURE')) {
                 images.push(htmlItem.parentElement);
+            } else if (nodeName.includes('EM') && row.querySelector('a') != null) {
+                htmlItem.parentElement.classList.add('button-container');
+                htmlItem.firstElementChild.classList.add('button');
+                htmlItem.firstElementChild.classList.add('secondary');
+                elements.push(htmlItem.parentElement);
             } else {
                 //else push into a general array
                 //TODO add a case for a tag | button items
                 elements.push(htmlItem.parentElement);
+                
             }
         } else {
             //check if there is any text being missed
@@ -32,8 +38,7 @@ export default function decorate(block) {
                 const div = document.createElement('div');
                 div.append(document.createElement('p'));
                 div.children[0].append(row.innerText.trim())
-                elements.push(div);
-                
+                elements.push(div);  
             }
         }
         
@@ -57,5 +62,6 @@ export default function decorate(block) {
     })
     elements.forEach((element) => {
         block.append(element);
+        
     })
 }
