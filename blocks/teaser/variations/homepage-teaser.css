@@ -1,27 +1,26 @@
 /* Main Homepage Teaser Styling */
 .teaser.homepage.secondary {
-    background-color: var(--HPF-s-teaser-background);
+    background-color: var(--secondary-background-color);
     > div > p {
-        font-family: var(--HPF-s-teaser-text-font-family);
-        color: var(--HPF-s-teaser-text-color);
-        font-weight: var(--HPF-s-teaser-text-weight);
-        line-height: var(--HPF-s-teaser-text-line-heigh);
-        font-size: var( --HPF-s-teaser-text-size);
+        font-family: var(--poppins-font-family);
+        color: var(--white);
+        line-height: var(--x2);
+        font-size: var(--size-16);
     }
     .teaser-pre-title .title {
-        color: var(--HPF-s-teaser-pretitle-color);
-        font-size: var(--HPF-s-teaser-pretitle-font-size);
-        line-height: var(--HPF-s-teaser-pretitle-line-height);
-        font-family: var(--HPF-s-teaser-pretitle-font-family);
-        font-weight: var(--HPF-s-teaser-pretitle-font-weight);
+        color: var(--light-purple);
+        font-size: var(--size-14);
+        line-height: var(--x2);
+        font-family: var(--poppins-font-family);
+        font-weight: var(--bold-600);
         text-transform: uppercase;
     }    
     .title {
-        color: var(--HPF-s-teaser-title-color);
-        font-size: var(--HPF-s-teaser-title-font-size);
-        line-height: var(--HPF-s-teaser-title-line-height);
-        font-family: var(--HPF-s-teaser-title-font-family);
-        font-weight: var(--HPF-s-teaser-title-font-weight);
+        color: var(--white);
+        font-size: var(--size-60);
+        line-height: var(--size-60);
+        font-family: var(--superior-font-family);
+        font-weight: var(--bold-700);
     }   
 }
 

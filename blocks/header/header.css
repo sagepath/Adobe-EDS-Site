@@ -32,7 +32,7 @@ header nav[aria-expanded="true"] {
 
 @media (min-width: 600px) {
   header nav {
-    padding: 0 2rem;
+    padding: 1rem 2rem 0 2rem;
   }
 }
 
@@ -197,6 +197,8 @@ header nav .nav-sections ul > li > ul > li:hover a {
 
 header nav .nav-sections ul > li > ul > li {
   font-weight: var(--header-font-weight);
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 900px) {
@@ -210,7 +212,8 @@ header nav .nav-sections ul > li > ul > li {
     align-self: unset;
   }
 
-  header nav .nav-sections .nav-drop {
+  header nav .nav-sections .nav-drop,
+  header nav .nav-sections li {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
@@ -282,6 +285,11 @@ header nav .nav-sections ul > li > ul > li {
     padding: 8px 0;
     color: var(--header-dropdown-font-color);
     padding: 1em;
+  }
+  header nav .nav-sections > ul > li > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
   }
   header nav .nav-sections > ul > li > ul > li:hover,  
   header nav .nav-sections > ul > li > ul > li:hover a {

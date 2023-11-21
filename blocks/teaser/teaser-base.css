@@ -4,21 +4,18 @@
     z-index: 5;
 }
 
-.section.teaser-container .teaser-wrapper {
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-}
-
 .section.teaser-container {
+    overflow: hidden;
     position: relative;
     padding: 0;
     max-height: 720px;
     height: 720px;
     .teaser-wrapper  {
         height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
         .teaser {
             display: flex;
             flex-direction: column;
@@ -45,6 +42,18 @@
         }
     }
 }
+
+.section.teaser-container.columns-container {
+    height: fit-content;
+    .columns > div > div {
+        height: 600px;
+
+        .teaser-wrapper {
+            padding-top: 2rem;
+        }
+    }
+}
+
 /* Style Modifiers to Move Content Horizontally*/
 .teaser.align-center {
     align-items: center !important;

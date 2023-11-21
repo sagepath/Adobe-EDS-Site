@@ -8,22 +8,22 @@
 
     .teaser-pre-title {
         .title {
-            font-family: var(--hero-p-teaser-text-font-family);
-            color: var(--hero-p-teaser-text-color);
-            font-size: var(--hero-p-teaser-pretitle-font-size);
-            line-height: var(--hero-p-teaser-pretitle-line-height);
-            font-weight: var(--hero-p-teaser-pretitle-font-weigh);
+            font-family: var(--poppins-font-family);
+            color: var(--ivory);
+            font-size: var(--size-14);
+            line-height: var(--x2);
+            font-weight: var(--bold-600);
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 50px;
         }
     }
     .title {
         margin: 0;
-        color: var(--hero-p-teaser-title-color);
-        font-size: var(--hero-p-teaser-title-font-size);
-        line-height: var(--hero-p-teaser-title-line-height);
-        font-family: var(--hero-p-teaser-title-font-family);
-        font-weight: var(--hero-p-teaser-title-font-weight);
+        color: var(--ivory);
+        font-size: var(--size-120);
+        line-height: .4;
+        font-family: var(--superior-font-family);
+        font-weight: var(--bold-700);
     }
     .image  > picture > img {
         max-height: 600px;

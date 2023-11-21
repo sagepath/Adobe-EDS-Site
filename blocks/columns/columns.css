@@ -31,3 +31,12 @@
     order: unset;
   }
 }
+
+.columns.secondary {
+  background-color: var(--dark-purple);
+
+}
+
+.section.columns-container.secondary {
+  background-color: var(--dark-purple);
+}

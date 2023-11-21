@@ -20,10 +20,12 @@
      /* Font Sizes */
      --size-14: 14px;
      --size-16: 16px;
+     --size-18: 18px;
      --size-60: 60px;
      --size-120: 120px;
 
      /* Font Weights */
+      --bold-700: 700;
      --bold-700: 700;
      --bold-600: 600;
 
@@ -78,7 +80,6 @@
      --button-disabled-background-color: var(--white);
      --button-disabled-text: var(--light-slate);
     
-
      /* Header */
      --header-background-color: var(--dark-purple);
      --header-font-family: var(--poppins-font-family);
@@ -110,53 +111,7 @@
      --footer-icon-border-color: var(--purple);
      --footer-icon-border-hover-color: var(--light-purple);
 
-     /* Default Teaser Cards*/
-     --teaser-pretitle-color: var(--light-purple);
-     --teaser-title-color: var(--ivory);
-     --teaser-title-font-size: var(--size-120);
-     --teaser-title-font-weight: var(--bold-700);
-     --teaser-title-line-height: 1;
-     --teaser-text-color: var(--ivory);
 
-     /*TODO background Colors*/
-     /* Hero Teaser Primary Theme*/
-     /* Title*/
-     --hero-p-teaser-title-color: var(--ivory);
-     --hero-p-teaser-title-font-size: var(--size-120);
-     --hero-p-teaser-title-line-height: 77px;
-     --hero-p-teaser-title-font-family: var(--superior-font-family);
-     --hero-p-teaser-title-font-weight: var(--bold-700);
-    /* Pre Title */
-     --hero-p-teaser-pretitle-color: var(--ivory);
-     --hero-p-teaser-pretitle-font-family: var(--poppins-font-family);
-     --hero-p-teaser-pretitle-font-size: var(--size-14);
-     --hero-p-teaser-pretitle-font-weight: var(--bold-600);
-     --hero-p-teaser-pretitle-line-height: var(--x2);
-     /* Text */
-     --hero-p-teaser-text-font-family: var(--poppins-font-family);
-     --hero-p-teaser-text-color: var(--ivory);
-
-    /*TODO background Colors*/
-     /* Hompage Feature Teaser Secondary Theme*/
-     /* Title*/
-     --HPF-s-teaser-background: var(--secondary-background-color);
-     --HPF-s-teaser-title-color: var(--white);
-     --HPF-s-teaser-title-font-size: var(--size-60);
-     --HPF-s-teaser-title-line-height: (64px);
-     --HPF-s-teaser-title-font-family: var(--superior-font-family);
-     --HPF-s-teaser-title-font-weight: var(--bold-700);
-    /* Pre Title */
-    --HPF-s-teaser-pretitle-color: var(--light-purple);
-    --HPF-s-teaser-pretitle-font-family: var(--poppins-font-family);
-    --HPF-s-teaser-pretitle-font-size: var(--size-14);
-    --HPF-s-teaser-pretitle-font-weight: var(--bold-600);
-    --HPF-s-teaser-pretitle-line-height: var(--x2);
-     /* Text */
-     --HPF-s-teaser-text-font-family: var(--poppins-font-family);
-     --HPF-s-teaser-text-color: var(--white);
-     --HPF-s-teaser-text-size: var(16px);
-     --HPF-s-teaser-text-line-height: var(2);
-     --HPF-s-teaser-text-weight: 400;
 
      /* body sizes */
      --body-font-size-m: 22px;

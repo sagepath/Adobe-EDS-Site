@@ -10,7 +10,8 @@ a:any-link {
   }
   
   /* Common Styling */
-  a.button:any-link, button {
+  a.button:any-link, button,
+  header div.nav-tools p strong a {
     font-family: var(--button-font);
     font-size: var(--button-text-size);
     line-height: var(--button-line-height);
@@ -32,15 +33,23 @@ a:any-link {
   a.button:hover, a.button:focus, button:hover, button:focus  {
     cursor: pointer;
   }
+
+  header p strong a:hover,
+  header p strong a:focus {
+    border-color: var(--purple) !important;
+  }
+  
 /* Primary Button */
   p > a.button,
-  div > a.button {
+  div > a.button,
+  header div.nav-tools p strong a {
     background-color: var(--button-background-color);
     color: var(--button-font-color);
   }
 
   p > a.button:hover,
-  div > a.button:hover {
+  div > a.button:hover,
+  header div.nav-tools p strong a:hover  {
     background-color: var(--button-hover-background-color);
     color: var(--button-hover-font-color);
   }
