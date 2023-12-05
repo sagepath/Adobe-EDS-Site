@@ -15,6 +15,7 @@
 
 @import './site/variables.css';
 @import './site/links.css';
+@import './site/article-template.css';
 
 
 @font-face {

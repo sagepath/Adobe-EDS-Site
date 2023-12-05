@@ -25,6 +25,9 @@
             position: absolute;
             background-color: var(--ivory);
         }
+        > a:hover {
+            text-decoration: none;
+        }
     }
     .image {
         max-height: 300px;

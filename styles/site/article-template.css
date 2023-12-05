@@ -1,0 +1,6 @@
+body.article {
+    .section .default-content-wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

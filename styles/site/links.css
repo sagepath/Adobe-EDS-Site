@@ -35,7 +35,9 @@ a:any-link {
   }
 
   header p strong a:hover,
-  header p strong a:focus {
+  header p strong a:focus,
+  footer p.button-container a:hover,
+  footer p.button-container a:focus {
     border-color: var(--purple) !important;
   }
   

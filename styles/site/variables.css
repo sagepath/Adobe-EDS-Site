@@ -3,9 +3,9 @@
      --mobile-breakpoint-min: 900px;
      --mobile-breakpoint-max: calc(var(--mobile-breakpoint-min) - 1px);
      /* Sagepath colors*/
-     --dark-purple: #2C1C53;
-     --purple: #6C39D9;
-     --light-purple: #CAB0FF;
+     --dark-purple: #0B0B45;
+     --purple: #0583D2;
+     --light-purple: #BBE3FF;
      --white: #FFFFFF;
      --ivory: #F3F0E8;
      --dark-ivory: #D9D6CC;
@@ -110,8 +110,6 @@
      --footer-border-color: var(--purple);
      --footer-icon-border-color: var(--purple);
      --footer-icon-border-hover-color: var(--light-purple);
-
-
 
      /* body sizes */
      --body-font-size-m: 22px;

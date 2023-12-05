@@ -75,3 +75,15 @@
 .teaser.justify-baseline {
     justify-content: baseline !important;
 }
+
+
+.teaser.shaded-100 {
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: #00000040;
+    }
+}
