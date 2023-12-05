@@ -40,3 +40,7 @@
 .section.columns-container.secondary {
   background-color: var(--dark-purple);
 }
+
+.columns.center {
+  text-align: center;
+}
