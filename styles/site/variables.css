@@ -28,6 +28,8 @@
       --bold-700: 700;
      --bold-700: 700;
      --bold-600: 600;
+     --normal: 400;
+     --normal-500: 500;
 
      /* Line Heights */
      --x2: 2;
@@ -85,6 +87,7 @@
      --header-font-family: var(--poppins-font-family);
      --header-font-color: var(--white);
      --header-font-weight: var(--bold-700);
+     --header-items-font-weight: var(--normal);
      --header-hover-color: var(--light-purple);
      --header-font-size: var(--size-14);
      --header-line-height: var(--x2);
