@@ -4,6 +4,7 @@
  */
 export default async function decorate(block) {
     console.log(block);
+    let title, subtitle = '';
     [...block.children].forEach(async (row) => {
         console.log(row);
         let children = row.children;
@@ -16,7 +17,6 @@ export default async function decorate(block) {
         } else if (children[0].innerText == 'tags') {
 
         } else if (children[0].innerText == 'linkToData') {
-            console.log("API CALL HERE");
             const data = await getArticles(children[1].innerText);
             if (data != null) {
                 block.append(createArticleBlocks(data));
