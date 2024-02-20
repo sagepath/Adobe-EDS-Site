@@ -2,7 +2,6 @@
  * @param {*} block the html for tables authored with the class teaser
  */
 export default function decorate(block) {
-    console.log("teaser block");
     console.log(block);
     //The teaser will queue each item in order. 
     var elements = [];

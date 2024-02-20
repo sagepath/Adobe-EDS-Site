@@ -1,9 +1,9 @@
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--header-background-color);
-  width: 100%;
+  width: 100vw;
   z-index: 10;
-  position: fixed;
+  position: sticky;
 }
 
 header nav {
@@ -348,6 +348,12 @@ header nav .nav-tools {
     }
     .nav-tools {
       margin: auto;
+      display: none;
+    }
+  }
+  header nav[aria-expanded="true"] {
+    .nav-tools {
+      display: block;
     }
   }
 }
