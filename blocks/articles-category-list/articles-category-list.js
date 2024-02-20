@@ -1,9 +1,9 @@
+import { createAndAppend, getData } from "../../scripts/utilities.js";
 /***
  * @param {*} block the html for tables authored with the class 
  * Articles Category List
  */
 export default async function decorate(block) {
-    console.log(block);
     let title, subtitle = '';
     [...block.children].forEach(async (row) => {
         console.log(row);
@@ -17,20 +17,22 @@ export default async function decorate(block) {
         } else if (children[0].innerText == 'tags') {
 
         } else if (children[0].innerText == 'linkToData') {
-            const data = await getArticles(children[1].innerText);
+            const data = await getData(children[1].innerText);
             if (data != null) {
                 block.append(createArticleBlocks(data));
             }     
         }
-    })
+    });
     block.textContent = '';
+    //TODO Style this feature
+    block.append(title);
+    block.append(subtitle);
 }
 
 function createArticleBlocks(data) {
     const blocksWrapper = document.createElement('div');
     blocksWrapper.className = 'article-list-wrapper';
     data.data.forEach((article) => {
-        //TODO create a createAndAppend method here
         let articleContainer = document.createElement('div');
         articleContainer.className = 'article-container';
         let date = formatDate(article.publishedDate);
@@ -50,19 +52,8 @@ function createArticleBlocks(data) {
 function formatDate(date) {
     let formattedDate = new Date(1899, 11, 30);
     formattedDate.setDate(formattedDate.getDate() + parseInt(date));
-    return formattedDate.toDateString();
-}
-
-function createAndAppend(element, className, array, link) {
-    let newElement = document.createElement(element);
-    if (element = 'a') {
-        newElement.href = link;
-    }
-    newElement.className = className;
-    array.forEach((item) => {
-        newElement.append(item);
-    })
-    return newElement;
+    let dateArray = formattedDate.toDateString().split(' ');
+    return dateArray[1] + " " + dateArray[2] + ", " + dateArray[3];
 }
 
 function createImage(img) {

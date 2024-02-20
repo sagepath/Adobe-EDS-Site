@@ -15,7 +15,7 @@ import {
 
 import {
   embedSections
-} from './embed.js'
+} from './embed.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
