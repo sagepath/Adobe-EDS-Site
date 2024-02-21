@@ -36,8 +36,21 @@ async function getData(linkToData) {
     } 
 }
 
+function getBlockJSON(block) {
+    let blockJSON = {};
+    [...block.children].forEach((row) => {
+        let children = row.children;
+        if (children.length < 2) {
+            return;
+        } 
+        blockJSON[children[0].innerText] = children[1].innerText;
+    });
+    return blockJSON;
+}
+
 export {
     getData,
+    getBlockJSON,
     createImage,
     createAndAppend
 }
