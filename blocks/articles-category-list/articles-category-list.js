@@ -6,7 +6,6 @@ import { createAndAppend, getData, createImage } from "../../scripts/utilities.j
 export default async function decorate(block) {
     let title, subtitle = '';
     [...block.children].forEach(async (row) => {
-        console.log(row);
         let children = row.children;
         if (children.length < 2) {
             return;
