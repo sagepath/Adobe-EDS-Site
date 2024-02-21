@@ -11,6 +11,12 @@ function createAndAppend(element, className, array, link) {
     return newElement;
 }
 
+function createImage(img) {
+    let newImage = document.createElement("img");
+    newImage.src = img;
+    return newImage;
+}
+
 async function getData(linkToData) {
     try {
         const url = new URL("https://main--adobe-eds-site--sagepath.hlx.live" + linkToData + ".json").pathname;
@@ -32,5 +38,6 @@ async function getData(linkToData) {
 
 export {
     getData,
+    createImage,
     createAndAppend
 }

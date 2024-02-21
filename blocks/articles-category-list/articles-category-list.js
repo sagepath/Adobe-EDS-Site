@@ -1,4 +1,4 @@
-import { createAndAppend, getData } from "../../scripts/utilities.js";
+import { createAndAppend, getData, createImage } from "../../scripts/utilities.js";
 /***
  * @param {*} block the html for tables authored with the class 
  * Articles Category List
@@ -54,12 +54,6 @@ function formatDate(date) {
     formattedDate.setDate(formattedDate.getDate() + parseInt(date));
     let dateArray = formattedDate.toDateString().split(' ');
     return dateArray[1] + " " + dateArray[2] + ", " + dateArray[3];
-}
-
-function createImage(img) {
-    let newImage = document.createElement("img");
-    newImage.src = img;
-    return newImage;
 }
 
 function createAuthorLink(name, icon, profileLink) {

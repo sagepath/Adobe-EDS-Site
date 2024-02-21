@@ -52,6 +52,7 @@
         min-height: 27px;
         height: fit-content;
         display: flex;
+        padding-top: 5px;
         align-items: center;
         .publish-date {
             font-weight: 200;
