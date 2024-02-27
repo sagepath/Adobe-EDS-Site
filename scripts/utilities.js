@@ -17,6 +17,14 @@ function createImage(img) {
     return newImage;
 }
 
+
+function formatExcelDate(date) {
+    let formattedDate = new Date(1899, 11, 30);
+    formattedDate.setDate(formattedDate.getDate() + parseInt(date));
+    let dateArray = formattedDate.toDateString().split(' ');
+    return dateArray[1] + " " + dateArray[2] + ", " + dateArray[3];
+}
+
 async function getData(linkToData) {
     try {
         const url = new URL("https://main--adobe-eds-site--sagepath.hlx.live" + linkToData + ".json").pathname;
@@ -52,5 +60,6 @@ export {
     getData,
     getBlockJSON,
     createImage,
+    formatExcelDate,
     createAndAppend
 }

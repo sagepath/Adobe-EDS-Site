@@ -1,31 +1,29 @@
-import { createAndAppend, getData, createImage } from "../../scripts/utilities.js";
+import { createAndAppend, getData, createImage, getBlockJSON, formatExcelDate } from "../../scripts/utilities.js";
 /***
  * @param {*} block the html for tables authored with the class 
  * Articles Category List
  */
 export default async function decorate(block) {
-    let title, subtitle = '';
-    [...block.children].forEach(async (row) => {
-        let children = row.children;
-        if (children.length < 2) {
-            return;
-        } else if (children[0].innerText == 'title') {
-            title = children[1].innerText;
-        } else if (children[0].innerText == 'subtitle') {
-            subtitle = children[1].innerText;
-        } else if (children[0].innerText == 'tags') {
+    let title, subtitle, data = '';
+    
+    let blockJSON = getBlockJSON(block);
+    if (blockJSON.hasOwnProperty("title")) {
+        title = blockJSON.title;
+    }
+    if (blockJSON.hasOwnProperty("subtitle")) {
+        subtitle = blockJSON.subtitle;
+    }
+    if (blockJSON.hasOwnProperty("tags")) {
 
-        } else if (children[0].innerText == 'linkToData') {
-            const data = await getData(children[1].innerText);
-            if (data != null) {
-                block.append(createArticleBlocks(data));
-            }     
-        }
-    });
+    } 
+    if (blockJSON.hasOwnProperty("linkToData")) {
+        data = await getData(blockJSON.linkToData);
+    }
     block.textContent = '';
-    //TODO Style this feature
+    //TODO Style and implement this feature
     block.append(title);
     block.append(subtitle);
+    block.append(createArticleBlocks(data));
 }
 
 function createArticleBlocks(data) {
@@ -34,7 +32,7 @@ function createArticleBlocks(data) {
     data.data.forEach((article) => {
         let articleContainer = document.createElement('div');
         articleContainer.className = 'article-container';
-        let date = formatDate(article.publishedDate);
+        let date = formatExcelDate(article.publishedDate);
         const author = createAuthorLink(article.author, article.authorIcon, article.authorLink);
         const info = createInfo(article.title, article.subtitle, article.articleLink);
         const tagline = createTagline(date, article.tags);
@@ -42,17 +40,9 @@ function createArticleBlocks(data) {
         let articleImageWrapper = createAndAppend('a', 'article-image-wrapper', [articleImage], article.articleLink);
         let textBody = createAndAppend('div', 'text-body', [author, info, tagline]);
         let articleBlock = createAndAppend('div', 'article-block', [textBody, articleImageWrapper]);
-        console.log(articleBlock);
         blocksWrapper.append(articleBlock);
     })
     return blocksWrapper;
-}
-
-function formatDate(date) {
-    let formattedDate = new Date(1899, 11, 30);
-    formattedDate.setDate(formattedDate.getDate() + parseInt(date));
-    let dateArray = formattedDate.toDateString().split(' ');
-    return dateArray[1] + " " + dateArray[2] + ", " + dateArray[3];
 }
 
 function createAuthorLink(name, icon, profileLink) {
@@ -76,7 +66,11 @@ function createInfo(title, subtitle, profileLink) {
 //TODO support more than one tag
 function createTagline(date, tags) {
     let tagBasePage = "https://main--adobe-eds-site--sagepath.hlx.live/tags/tag";
-    let dateSpan = createAndAppend('span', 'publish-date', [date]);
+    let dateSpan = '';
+    if (date != null) {
+        dateSpan = createAndAppend('span', 'publish-date', [date]);
+    }
+   
     if (tags != null && tags != '') {
         tags = tags.split(',');
     } else {
@@ -88,21 +82,7 @@ function createTagline(date, tags) {
     return taglineWrapper;
 }
 
-async function getArticles(linkToData) {
-    try {
-        const url = new URL("https://main--adobe-eds-site--sagepath.hlx.live" + linkToData + ".json").pathname;
-        const resp = await fetch(url);  
-        // Check if the request was successful
-        if (!resp.ok) {
-            throw new Error('Network response was not ok');
-        }
-        // Parse the response body as JSON or text, depending on your requirement
-        const data = await resp.json(); // or resp.text() if the response is not JSON    
-        // Now you can work with the data received
-        return data;
-        
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        return null;
-    } 
+export {
+    createInfo,
+    createTagline
 }

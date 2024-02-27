@@ -5,7 +5,7 @@ import { createAndAppend, createImage, getBlockJSON } from "../../scripts/utilit
  * Article Intro
  */
 export default function decorate(block) {
-    let title, subtitle, author, authorIcon, authorLink, publishDate = '';
+    let title, subtitle, author, authorIcon, publishDate = '';
     const blockJSON = getBlockJSON(block);
     block.textContent = ''; 
     if (blockJSON.hasOwnProperty("title")) {
@@ -19,7 +19,7 @@ export default function decorate(block) {
     } 
     if (blockJSON.hasOwnProperty("author") && blockJSON.hasOwnProperty("authorLink")) {
         author = createAndAppend('p', 'article-author', [blockJSON.author]);
-        author = createAndAppend('a', 'article-author-link', [author], block, blockJSON.authorLink);
+        author = createAndAppend('a', 'article-author-link', [author], blockJSON.authorLink);
     } 
     if (blockJSON.hasOwnProperty("authorIcon") && blockJSON.hasOwnProperty("authorLink")) {
         authorIcon = createImage(blockJSON.authorIcon);

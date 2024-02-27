@@ -62,7 +62,7 @@
         .tag {
             font-weight: 200;
             font-size: 12px;
-            padding: 7px 5px;
+            padding: 7px 7px;
             border-radius: 14px;
             background-color: var(--light-purple);
         }

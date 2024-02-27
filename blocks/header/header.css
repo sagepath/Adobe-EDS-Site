@@ -6,6 +6,10 @@ header .nav-wrapper {
   position: sticky;
 }
 
+nav {
+  background-color: var(--header-background-color);
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;

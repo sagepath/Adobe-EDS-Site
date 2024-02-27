@@ -1,0 +1,27 @@
+.tabs-container {
+    .tabs {
+        display: flex;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+        .tab-wrapper {
+            cursor: pointer;
+            margin-right: 32px;
+            padding-bottom: 16px;
+            &.active {
+                border-bottom: solid 1px black;
+            }
+            .tab-name {
+                margin: 0;
+            }
+        }
+
+    }
+}
+
+.inactive-container {
+    display: none !important;
+}
+
+.section.tabs-container {
+    padding-bottom: 0;
+    padding-top: 0;
+}

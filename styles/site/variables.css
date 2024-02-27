@@ -104,9 +104,9 @@
      --header-hamburger-border-color: var(--purple);
 
      /* Footer */
-     --footer-background-color: var(--dark-purple);
+     --footer-background-color: var(--white);
      --footer-font-family: var(--poppins-font-family);
-     --footer-listed-links-color: var(--ivory);
+     --footer-listed-links-color: var(--purple);
      --footer-links-font-size: var(--size-14);
      --footer-links-line-height: var(--x2);
      --footer-links-weight: var(--bold-700);

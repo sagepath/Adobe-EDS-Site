@@ -1,7 +1,9 @@
 body.article {
+    font-size: 18px;
     .section {
-        padding: 20px 0;
-        max-width: 700px;
+        padding: 20px 40px;
+        width: 700px;
+        max-width: 100%;
     }
     main {
         display: flex;

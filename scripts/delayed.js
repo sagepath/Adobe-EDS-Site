@@ -5,3 +5,6 @@ import { sampleRUM } from './aem.js';
 sampleRUM('cwv');
 
 // add more delayed functionality here
+$(document).ready(function(){
+    $('.pushpin').pushpin();
+  });
