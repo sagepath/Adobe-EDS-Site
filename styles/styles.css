@@ -16,7 +16,7 @@
 @import './site/variables.css';
 @import './site/links.css';
 @import './site/article-template.css';
-
+@import './site/tags-template.css';
 
 @font-face {
   font-family: roboto-fallback;

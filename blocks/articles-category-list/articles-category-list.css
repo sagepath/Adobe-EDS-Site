@@ -53,6 +53,7 @@
         height: fit-content;
         display: flex;
         padding-top: 5px;
+        flex-wrap: wrap;
         align-items: center;
         .publish-date {
             font-weight: 200;

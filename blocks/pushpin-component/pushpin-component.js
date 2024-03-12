@@ -16,5 +16,3 @@ function createPushpin(user, target) {
 export {
     createPushpin
 }
-  //create a pushpin with author-basepage
-  //use on home page 

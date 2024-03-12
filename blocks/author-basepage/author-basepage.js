@@ -98,7 +98,6 @@ function organizePage(block, div1, div2) {
 }
 
 function generateDesktopInfo(authorData) {
-    console.log(authorData);
     let authorIcon = createImage(authorData.authorIcon);
     let authorName = createAndAppend('span', 'expanded-author-name', [authorData.name]);
     authorName = createAndAppend('div', 'author-name-wrapper', [authorName]);
